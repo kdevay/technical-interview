@@ -6,7 +6,7 @@ import uniqid from 'uniqid'
 
 // generates JSX containing appropriate popover content
 export function getPopoverContent(type: string, value: boolean | string) {
-  if (typeof value === 'string') { // for RIASEC content
+  if (typeof value === 'string') { // If populating RIASEC content
     const openingLine = riasecContent[value].opener;
     const contentList = riasecContent[value].list;
     return (
@@ -34,21 +34,20 @@ export function getPopoverContent(type: string, value: boolean | string) {
   );
 }
 
-// generates appropriate icon JSX and text for popover
+// Generates appropriate icon JSX and text for popover
 const getButtonContent = (type: string, value: string | boolean) => {
   const buttonContent = {
     text: 'Earn & Learn',
     image: <EarnAndLearnIcon width={''} height={''} />,
   };
+
   if (type === 'RIASEC' && typeof value === 'string') {
-    // capitalize first letter of RIASEC interest
     buttonContent.text = value
     buttonContent.image = <RIASECIcon width={''} height={''} RIASEC={value} />;
   } else if (type.includes('Gateway')) {
     buttonContent.text = 'Gateway Job';
     buttonContent.image = <GatewayIcon width={''} height={''} />;
   }
-
 
   return buttonContent
 };

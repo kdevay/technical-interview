@@ -46,6 +46,7 @@ h1 {
 h2 {
   font-size: 25px;
   margin: 0;
+  font-family: 'Poppins', 'Calibri', Arial, sans-serif;
 }
 h5 {
   font-size: 18px;
@@ -64,6 +65,7 @@ button {
   border: none;
   background-color: var(--color-neutral-bg);
 }
+a:hover,
 button:hover {
   cursor: pointer;
 }

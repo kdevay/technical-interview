@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styles from './index.module.scss'
 import Image from 'next/image'
 import Popover from '../Popover/index.module'
@@ -43,9 +43,11 @@ const getSkillsString = (skills: ValueObject[]) => {
   // Map skills into a string
   let allSkills = '';
   skills.map((skill, index) => {
-    if (index === skills.length - 1) { // If adding last string
+    if (index === skills.length - 1) { 
+      // If adding last string
       allSkills += `, and ${skill.value}`;
-    } else if (!index) { // If adding first string
+    } else if (!index) { 
+      // If adding first string
       allSkills += `${skill.value}`;
     }
     allSkills += `, ${skill.value}`;
@@ -55,6 +57,7 @@ const getSkillsString = (skills: ValueObject[]) => {
   if (allSkills.length > maxLength) {
     // Get new maxlength, accounting for ellipses
     maxLength -= - 3;
+
     // Find insertion index for ellipses
     const ellipsesIndex = getEllipsesInsertionIndex(allSkills, maxLength);
     allSkills = `${allSkills.substring(0, ellipsesIndex)}...`;
@@ -66,7 +69,6 @@ export default function JobTile(props: Props) {
   const [isLiked, setIsLiked] = useState(false);
   const SkillsString = getSkillsString(props.skills);
   const cityStateArray = splitCityState(props.city);
-  console.log('companyName', props.companyName);
 
   // Switch heart icon (filled/undilled) on click
   const handleLikes = (e: React.MouseEvent<HTMLButtonElement>) => {

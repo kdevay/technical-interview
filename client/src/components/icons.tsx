@@ -49,20 +49,7 @@ export function HeartIcon(props: FilledOrUnfilledIconProps) {
     );
 }
 
-export function CaretIcon(props: IconProps) {
-  // const {width, height} = props;
-  const width = props.width || "12px";
-  const height = props.height || "6.5px";
-
-  return(
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 14.632 8.513">
-        <path fill="#013145" d="M6.805,189.786.176,183.054a.686.686,0,0,1,0-.972l.406-.406a.686.686,0,0,1,.971,0l5.738,5.846,5.738-5.84a.686.686,0,0,1,.971,0l.406.406a.686.686,0,0,1,0,.972l-6.629,6.732A.692.692,0,0,1,6.805,189.786Z" transform="translate(0.025 -181.475)"/>
-    </svg>
-  );
-}
-
 export function FastForwardIcon(props: IconProps) {
-  // const {width, height} = props;
   const width = props.width || "24px";
   const height = props.height || "24px";
 
@@ -81,7 +68,6 @@ export function FastForwardIcon(props: IconProps) {
 }
 
 export function EarnAndLearnIcon(props: IconProps) {
-  // const {width, height} = props;
   const width = props.width || "14px";
   const height = props.height || "8px";
 
@@ -93,7 +79,6 @@ export function EarnAndLearnIcon(props: IconProps) {
 }
 
 export function GatewayIcon(props: IconProps) {
-  // const {width, height} = props;
   const width = props.width || "14px";
   const height = props.height || "8px";
 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 .mainContainer {
   display: flex;
@@ -8,10 +9,9 @@
   min-height: 100vw;
   max-width: 100vw;
   background-color: var(--color-neutral-main);
-  // font-family: var(font--main), 'Calibri', Arial, sans-serif;
   font-family: 'Poppins', 'Calibri', Arial, sans-serif;
   padding: 0;
-  margin: 0;
+  margin: 0 0 2em 0;
 }
 
 .headerDiv {
@@ -49,4 +49,9 @@
   border-bottom-color: inherit;
   border-bottom-style: dashed;
   border-bottom-width: 1px;
+  font-weight: 400;
+}
+.searchRowHeader {
+  font-weight: 600;
+  font-family: 'Nunito Sans', 'Calibri', Arial, sans-serif;
 }

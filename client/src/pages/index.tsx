@@ -48,7 +48,7 @@ export default function Home() {
             <div className={styles.headerDiv}>
             <h1>We locate promising jobs that provide educational perks. Keep coming back for new additions!</h1>
               <div className={styles.searchRow}>
-                <h5>
+                <h5 className={styles.searchRowHeader}>
                   {`Showing ${jobs.length} results.`}
                   &nbsp;&nbsp;
                   <span>
@@ -60,6 +60,7 @@ export default function Home() {
                 <input placeholder='Keyword'></input>
               </div>
             </div>
+            <br />
             <div className={styles.jobListingsContainer}>
             {jobs.slice(0, 10).map((job) => {
               return (

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './index.module.scss'
-import { CaretIcon, LocationIcon, FastForwardIcon, HeartIcon } from '../icons';
+import { LocationIcon, FastForwardIcon, HeartIcon } from '../icons';
 
 type Props = { alt: string, width: number, height: number, user: string }
 
@@ -19,13 +19,13 @@ export default function Navbar(props: Props) {
         <a>
           Why SkillUp?
         </a>
-        <a>
-          Menu &nbsp;
-          <CaretIcon
-            height={''}
-            width={''}
-          />
-        </a>
+        <select className={styles.menu}>
+          <option value="">Menu</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+
         <a className={styles.centered}>
           <div className={styles.navIcon}>
             <LocationIcon

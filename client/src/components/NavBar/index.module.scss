@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - (106px));
   margin: 0 0 3em 0;
   padding: 22px 60px;
   background-color: var(--color-neutral-bg);
   border: 1px solid var(--color-border);
   box-shadow: 0px 3px 6px var(--color-shadow);
-  font-family: var(--font-main) 'Calibri', Arial, sans-serif;
 }
 
 .navButtonContainer {
@@ -17,7 +18,9 @@
   align-items: center;
   gap: 25px;
   color: var(--color-main);
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Nunito Sans', 'Calibri', Arial, sans-serif;
 }
 
 .navIcon {
@@ -29,4 +32,24 @@
   flex-direction: row;
   align-items: center;
   gap: 5px;
+}
+
+.navButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-main);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Nunito Sans', 'Calibri', Arial, sans-serif;
+}
+
+.menu {
+  border: none;
+  font-family: 'Nunito Sans', 'Calibri', Arial, sans-serif;
+  color: var(--color-main);
+  font-size: 16px;
+  font-weight: 400;
+  width: 105px;
+  height: 35px;
 }
