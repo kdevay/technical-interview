@@ -5,7 +5,7 @@ import { JobModule } from './job/jobs.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://kat:9eT2N0cd3W0ENixU@technicaltask.60hhy.mongodb.net/',
+      'mongodb+srv://kat:9eT2N0cd3W0ENixU@technicaltask.60hhy.mongodb.net/kat-technical-task',
     ),
     JobModule,
   ],
