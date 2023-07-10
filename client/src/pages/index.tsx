@@ -37,18 +37,28 @@ export default function Home() {
 
         {/* If error occurs loading data from API */}
         { hasError || !jobs.length
-          ? <div>
+          ? <div className={styles.headerDiv}>
             <h1>We locate promising jobs that provide educational perks. Keep coming back for new additions!</h1>
-            <h2>Error: No jobs to display</h2>
+            <div className={styles.searchRow}>
+              <h2>Error: No jobs to display</h2>
+              <input placeholder='Keyword'></input>
+            </div>
           </div>
           : <>
-            <div>
-              {`Showing ${jobs.length} results.`}
-              <span>
-                <a className={styles.dashed}>
-                  How did we choose these jobs?
-                </a>
-              </span>
+            <div className={styles.headerDiv}>
+            <h1>We locate promising jobs that provide educational perks. Keep coming back for new additions!</h1>
+              <div className={styles.searchRow}>
+                <h5>
+                  {`Showing ${jobs.length} results.`}
+                  &nbsp;&nbsp;
+                  <span>
+                    <a className={styles.dashed}>
+                      How did we choose these jobs?
+                    </a>
+                  </span>
+                </h5>
+                <input placeholder='Keyword'></input>
+              </div>
             </div>
             <div className={styles.jobListingsContainer}>
             {jobs.slice(0, 10).map((job) => {
@@ -57,7 +67,7 @@ export default function Home() {
                   key={uniqid()}
                   title={job.title_name}
                   titleRaw={job.title_raw}
-                  companyName={job.company_name || job.company_raw}
+                  companyName={job.company_name === 'Unclassified' ? job.company_raw : job.company_name}
                   city={job.city_name}
                   riasec={job.riasec}
                   skills={job.skills_name}

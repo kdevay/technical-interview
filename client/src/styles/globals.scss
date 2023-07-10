@@ -38,3 +38,46 @@ body {
   padding: 0;
   margin: 0;
 }
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
+h2 {
+  font-size: 25px;
+  margin: 0;
+}
+h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+hr {
+  width: 100%;
+  height: -.09px;
+  border: .01px solid var(--color-border);
+  background-color: var(--color-border);
+  margin: 14px 0 12px 0;
+}
+
+button {
+  border: none;
+  background-color: var(--color-neutral-bg);
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  border: 1px solid var(--color-border-dark);
+  border-radius: 5px;
+  width: 205px;
+  height: 40px;
+  padding: 5px;
+}
+input:active,
+input:focus{
+  outline: 0px;
+  border: 2px solid var(--color-main);
+  width: 203px;
+  height: 38px;
+}

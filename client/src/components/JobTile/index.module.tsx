@@ -38,7 +38,7 @@ const getEllipsesInsertionIndex = (string: string, maxLength: number): number =>
 
 // Concatenate skills into one string & limit length
 const getSkillsString = (skills: ValueObject[]) => {
-  let maxLength = 192; // Define maximum string length before overflowing container
+  let maxLength = 180; // Define maximum string length before overflowing container
 
   // Map skills into a string
   let allSkills = '';
@@ -66,6 +66,7 @@ export default function JobTile(props: Props) {
   const [isLiked, setIsLiked] = useState(false);
   const SkillsString = getSkillsString(props.skills);
   const cityStateArray = splitCityState(props.city);
+  console.log('companyName', props.companyName);
 
   // Switch heart icon (filled/undilled) on click
   const handleLikes = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -96,13 +97,14 @@ export default function JobTile(props: Props) {
                     isFilled={true}
                   />
                 </div>
-                {`${cityStateArray[0]}, ${cityStateArray}`}
+                {`${cityStateArray[0]}, ${cityStateArray[1]}`}
               </div>
             </span>
           </div>
+          <br></br>
           <div className={styles.tileRow}>
             {/* Populate RIASEC popovers */}
-            { props.riasec.map((value, index) => {
+            { props.riasec.map((value) => {
               return (
                 <Popover
                   key={uniqid()}
@@ -130,6 +132,8 @@ export default function JobTile(props: Props) {
           <div className={styles.salary}>{`${formatCash(props.salary)}/year`}</div>
         </div>
       </div>
+
+      <hr/>
     
       <div className={styles.tileBottom}>
         <div className={styles.skills}>

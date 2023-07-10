@@ -6,7 +6,6 @@ import uniqid from 'uniqid'
 
 // generates JSX containing appropriate popover content
 export function getPopoverContent(type: string, value: boolean | string) {
-
   if (typeof value === 'string') { // for RIASEC content
     const openingLine = riasecContent[value].opener;
     const contentList = riasecContent[value].list;
@@ -43,7 +42,7 @@ const getButtonContent = (type: string, value: string | boolean) => {
   };
   if (type === 'RIASEC' && typeof value === 'string') {
     // capitalize first letter of RIASEC interest
-    buttonContent.text = value.replace(/^./, (match) => match.toUpperCase());
+    buttonContent.text = value
     buttonContent.image = <RIASECIcon width={''} height={''} RIASEC={value} />;
   } else if (type.includes('Gateway')) {
     buttonContent.text = 'Gateway Job';

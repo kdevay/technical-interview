@@ -15,15 +15,15 @@ interface RIASECobject {
 }
 interface RIASECcontent {
   [key: string]: RIASECobject,
-  realistic: RIASECobject,
-  investigative: RIASECobject,
-  artistic: RIASECobject,
-  social: RIASECobject,
-  enterprising: RIASECobject,
-  conventional: RIASECobject,
+  Realistic: RIASECobject,
+  Investigative: RIASECobject,
+  Artistic: RIASECobject,
+  Social: RIASECobject,
+  Enterprising: RIASECobject,
+  Conventional: RIASECobject,
 };
 export const riasecContent: RIASECcontent = {
-  realistic: {
+  Realistic: {
     opener: 'Realistic people like working with objects, machines, tools, plants or animals, and like to be outdoors or perform athletic activities.',
     list: [
       'Be independent, practical, systematic, self-controlled, and straightforward',
@@ -31,7 +31,7 @@ export const riasecContent: RIASECcontent = {
       'Be able to play a sport, fix things, operate tools and machinery, plant a garden, camp outdoors',
     ]
   },
-  investigative: {
+  Investigative: {
   opener: 'Investigative people like to observe, learn, investigate, analyze, and solve problems.',
     list: [
       'Be logical, curious, thoughtful, observant, and intellectual',
@@ -39,7 +39,7 @@ export const riasecContent: RIASECcontent = {
       'Be able to think abstractly, interpret formulas, use a computer or microscope, or solve complex problems',
     ]
   },
-  artistic: {
+  Artistic: {
     opener: 'Artistic people like to work in unstructured situations using their imagination and creativity.',
     list: [
       'Thrive on open-ended tasks and unconventional approaches to problem-solving',
@@ -47,7 +47,7 @@ export const riasecContent: RIASECcontent = {
       'Be able to think abstractly, find creative solutions, or have a unique eye for aesthetics',
     ],
   },
-  social: {
+  Social: {
     opener: 'Social people like to work with people to inspire, inform, help, train or cure them.',
     list: [
       'Be patient, insightful, responsible, cooperative, outgoing, and skilled with words',
@@ -55,7 +55,7 @@ export const riasecContent: RIASECcontent = {
       'Be able to teach others, mediate, lead a duscussion, communicate well, or plan and supervise activities',
     ]
   },
-  enterprising: {
+  Enterprising: {
     opener: 'Enterprising people like to work with people to influence, persuade and lead them, and to achieve organizational or financial goals.',
     list: [
       'Be assertive, energetic, persuasive, ambitious, or optimistic',
@@ -63,7 +63,7 @@ export const riasecContent: RIASECcontent = {
       'Be able to initiate projects give speeches, persuade or inspire others, lead a large group, or develop organizational goals',
     ]
   },
-  conventional: {
+  Conventional: {
     opener: 'Conventional people like to work with information, carry out detailed tasks, and have clerical or numerical interests.',
     list: [
       'Be efficient, well-organized, persistent, methodical, or conscientious',

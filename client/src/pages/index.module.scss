@@ -1,4 +1,4 @@
-/* homepage styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .mainContainer {
   display: flex;
@@ -8,9 +8,26 @@
   min-height: 100vw;
   max-width: 100vw;
   background-color: var(--color-neutral-main);
-  font-family: var(font--main), 'Calibri', Arial, sans-serif;
+  // font-family: var(font--main), 'Calibri', Arial, sans-serif;
+  font-family: 'Poppins', 'Calibri', Arial, sans-serif;
   padding: 0;
   margin: 0;
+}
+
+.headerDiv {
+  max-width: 766px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  color: var(--color-main);
+}
+.searchRow {
+  width: 768px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
 }
 
 .jobListingsContainer {
