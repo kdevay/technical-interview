@@ -1,0 +1,26 @@
+/* homepage styles */
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vw;
+  max-width: 100vw;
+  background-color: var(--color-neutral-main);
+  font-family: var(font--main), 'Calibri', Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.jobListingsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  max-width: 768px;
+  padding: 0;
+  margin: 0;
+}
