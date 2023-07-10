@@ -1,0 +1,65 @@
+.bold {
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+.dashed {
+  width: inherit;
+  padding-bottom: 2px;
+  border-bottom-color: inherit;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+.popover {
+  position: absolute;
+  z-index: 1;
+  background: var(--color-neutral-bg);
+  box-shadow: 0px 3px 4px var(--color-shadow);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  width: 350px;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+.popoverList {
+  margin-left: -20px;
+}
+
+// popover buttons
+.riasecButton,
+.boolButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  gap: 10px;
+}
+.riasecButton{
+  background-color: var(--color-quaternary);
+  font-weight: 500;
+}
+.boolButton {
+  margin-top: 5px;
+  background-color: var(--color-secondary);
+  font-weight: 300;
+}
+
+@media screen and (max-width: 619px) {
+  .salary {
+    font-size: 20px;
+  }
+  .skills,
+  .locationRow,
+  .riasecButton,
+  .boolButton {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,94 @@
+.bold {
+  font-weight: bold;
+}
+
+.tile {
+  border-radius: 10px;
+  color: var(--color-main);
+  width: 768px;
+  background-color: var(--color-neutral-bg);
+  border: 1px solid var(--color-border);
+  margin: .2em;
+}
+.tileTop {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+  padding: 30px 30px 0 30px;
+}
+.tileBottom {
+  padding: 0 30px 20px 30px;
+  overflow: hidden;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.jobLogo {
+  border-radius: 10px;
+  padding: 36px 16.5px 42px 16.5px;
+  border: 1px solid var(--color-border-medium);
+}
+.topLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.topRight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.tileRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.locationRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.locationIcon {
+  padding: 1px 3px 0 7px;
+}
+.salary {
+  font-size: 31px;
+  color: var(--color-secondary);
+  font-family: var(--font-main);
+  font-weight: 800;
+}
+.tileLine{
+  width: 100%;
+  height: .1px;
+  border: .01px solid var(--color-border);
+  background-color: var(--color-border);
+  margin: 14px 0 12px 0;
+}
+
+@media screen and (max-width: 619px) {
+  .salary {
+    font-size: 20px;
+  }
+  .skills,
+  .locationRow,
+  .riasecButton,
+  .boolButton {
+    font-size: 13px;
+  }
+}

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
-import NavBar from '@/components/NavBar'
-import JobTile from '@/components/NavBar'
-// import Image from 'next/image'
+import NavBar from '@/components/NavBar/index.module'
+import JobTile from '@/components/JobTile/index.module'
+import uniqid from 'uniqid'
 import Layout from './layout'
 import { Job } from '../utils/index'
 
@@ -14,7 +14,7 @@ export default function Home() {
   useEffect (() => {
     const fetchData = async () => {
       try {
-        const apiResponse = await fetch('http://localhost:4000/');
+        const apiResponse = await fetch('http://localhost:8000/');
         const data = await apiResponse.json();
         setJobs(data);
         setHasError(false);
@@ -28,23 +28,49 @@ export default function Home() {
   return (
     <Layout>
       <div className={styles.mainContainer}>
-        <NavBar></NavBar>
-        <div className={styles.jobListingsContainer}>
+        <NavBar
+          alt={'SkillUp Logo'}
+          width={250}
+          height={60}
+          user={'Leah'}
+        />
+
         {/* If error occurs loading data from API */}
-        { hasError
+        { hasError || !jobs.length
           ? <div>
             <h1>We locate promising jobs that provide educational perks. Keep coming back for new additions!</h1>
             <h2>Error: No jobs to display</h2>
           </div>
-          : <div>
-            {`Showing ${jobs.length} results.`}
-            <span>
-              <a className={styles.dashed}>How did we choose these jobs?</a>
-            </span>
-          </div>
+          : <>
+            <div>
+              {`Showing ${jobs.length} results.`}
+              <span>
+                <a className={styles.dashed}>
+                  How did we choose these jobs?
+                </a>
+              </span>
+            </div>
+            <div className={styles.jobListingsContainer}>
+            {jobs.slice(0, 10).map((job) => {
+              return (
+                <JobTile
+                  key={uniqid()}
+                  title={job.title_name}
+                  titleRaw={job.title_raw}
+                  companyName={job.company_name || job.company_raw}
+                  city={job.city_name}
+                  riasec={job.riasec}
+                  skills={job.skills_name}
+                  salary={job.salary}
+                  isGateway={job.is_gateway_job}
+                  isEarnAndLearn={job.is_earn_and_learn}
+                />
+              )
+            })}
+            </div>
+          </>
         }
-        <JobTile></JobTile>
-        </div>
+
       </div>
     </Layout>
   )

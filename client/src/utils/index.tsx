@@ -1,3 +1,10 @@
+// Formats numbers as cash results
+export function formatCash(number: number): string {
+  if (!number) return '';
+  const cash = Intl.NumberFormat('en-US').format(number);
+  return `$${cash}`;
+};
+
 // Job sub-types
 export type ValueObject = {
   [key: string]: string | number,
