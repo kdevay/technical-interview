@@ -24,3 +24,12 @@
   padding: 0;
   margin: 0;
 }
+
+// font styles
+.dashed {
+  width: inherit;
+  padding-bottom: 2px;
+  border-bottom-color: inherit;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
