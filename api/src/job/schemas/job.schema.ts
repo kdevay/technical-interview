@@ -20,15 +20,12 @@ export class Location {
   @Prop()
   lon: number;
 
-  @Prop()
+  @Prop({ type: Coordinates })
   coordinares: Coordinates;
 }
 
 @Schema()
 export class Job {
-  @Prop()
-  _id: string;
-
   @Prop()
   body: string;
 
